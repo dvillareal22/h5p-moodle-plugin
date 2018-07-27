@@ -95,9 +95,8 @@ class backup_hvp_activity_structure_step extends backup_activity_structure_step 
                                            hl.major_version,
                                            hl.minor_version,
                                      h.name, h.intro, h.introformat, h.json_content,
-                                     h.embed_type, h.disable, h.content_type, h.author,
-                                     h.license, h.meta_keywords, h.meta_description,
-                                     h.slug, h.timecreated, h.timemodified
+                                     h.embed_type, h.disable, h.content_type, h.authors,
+                                     h.license,h.slug, h.timecreated, h.timemodified
                                 FROM {hvp} h
                                 JOIN {hvp_libraries} hl ON hl.id = h.main_library_id
                                WHERE h.id = ?', array(backup::VAR_ACTIVITYID));
